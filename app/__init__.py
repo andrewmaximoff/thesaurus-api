@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from config.default import Config
+from config import Config
 from flask_login import LoginManager
 from flask_recaptcha import ReCaptcha
 from flask_caching import Cache
@@ -10,7 +10,7 @@ from flask_jwt_extended import JWTManager
 db = SQLAlchemy()
 login = LoginManager()
 recaptcha = ReCaptcha()
-cache = Cache()
+# cache = Cache()
 migrate = Migrate()
 jwt = JWTManager()
 
@@ -21,7 +21,7 @@ def create_app(config_class=Config):
 
     db.init_app(app)
     migrate.init_app(app, db)
-    cache.init_app(app)
+    # cache.init_app(app)
     login.init_app(app)
     recaptcha.init_app(app)
     jwt.init_app(app)

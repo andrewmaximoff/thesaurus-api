@@ -12,9 +12,9 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Cache
-    CACHE_TYPE = 'redis'
-    CACHE_KEY_PREFIX = 'fcache'
-    CACHE_DEFAULT_TIMEOUT = 1*10*60
+    # CACHE_TYPE = 'redis'
+    # CACHE_KEY_PREFIX = 'fcache'
+    # CACHE_DEFAULT_TIMEOUT = 1*10*60
 
     # reCAPTCHA
     RECAPTCHA_ENABLED = True
